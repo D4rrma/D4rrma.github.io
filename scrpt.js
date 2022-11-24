@@ -1,20 +1,18 @@
-var jmlAngkot=10;
-var noAngkot=1;
-var beroperasi=6;
-
-for(noAngkot;noAngkot<=jmlAngkot;noAngkot++){
-
-    if(noAngkot <= 6 && noAngkot !== 5){
-        console.log("nice" + noAngkot);
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
     }
-    else if(noAngkot == 8 || noAngkot == 10 || noAngkot == 5){
-        console.log("lembur"+ noAngkot)
-
-    }
-    
-    else{
-        console.log("not nice" + noAngkot)
-    }
-
-
-}
+  }
+  
+  window.addEventListener("scroll", reveal);
+  
