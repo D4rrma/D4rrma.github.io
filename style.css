@@ -44,7 +44,9 @@ a{
    
 }
 
-
+.menu{
+    display: none;
+}
 
 nav{
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
@@ -188,7 +190,9 @@ section .hero-image a:hover{
 /* hero image end */
 
 
-/* animate scroll */
+
+
+/* animation scroll */
 .reveal {
     position: relative;
     opacity: 0;
@@ -198,13 +202,38 @@ section .hero-image a:hover{
     opacity: 1;
   }
   .active.fade-bottom {
-    animation: fade-bottom 1s ease-in;
-  }
+    animation: fade-bottom .4s ease-in;
+    -webkit-animation: fade-bottom .4s ease-in;
+}
   .active.fade-left {
-    animation: fade-left 1s ease-in;
-  }
+    animation: fade-left .4s ease-in;
+    -webkit-animation: fade-left .4s ease-in;
+}
   .active.fade-right {
-    animation: fade-right 1s ease-in;
+    animation: fade-right .4s ease-in;
+    -webkit-animation: fade-right .4s ease-in;
+}
+  .active.flip {
+    animation: flip 1s ease-in;
+    -webkit-animation: flip .4s ease-in;
+}
+  @keyframes flip {
+    0% {
+      transform: rotateY(90deg);
+      opacity: 0;
+      -webkit-transform: rotateY(90deg);
+      -moz-transform: rotateY(90deg);
+      -ms-transform: rotateY(90deg);
+      -o-transform: rotateY(90deg);
+}
+    100% {
+      transform: rotateY(0);
+      opacity: 1;
+      -webkit-transform: rotateY(0);
+      -moz-transform: rotateY(0);
+      -ms-transform: rotateY(0);
+      -o-transform: rotateY(0);
+}
   }
   @keyframes fade-bottom {
     0% {
@@ -237,7 +266,8 @@ section .hero-image a:hover{
       opacity: 1;
     }
   }
-  /* animate scroll end */
+/* animation scroll end */
+
 
 /* content1 */
 .content a{
@@ -269,8 +299,8 @@ section .hero-image a:hover{
 .content a:hover{
     background:rgb(245, 233, 233);
 }
-#content{
-    margin-top: 60px;
+.content{
+    padding-top:60px ;
     display: grid;
     grid-area: content;
     
@@ -327,8 +357,10 @@ section .hero-image a:hover{
 
 /* content2 */
 
+#content2{
+    padding-top: 100px;
+}
 .content2{
-    height: 300px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -383,6 +415,7 @@ section .hero-image a:hover{
 
 .container-skill{
     background:rgb(6, 126, 196);
+    padding-top: 100px;
 }
 
 div.skill {
@@ -474,7 +507,8 @@ font-size: calc(4px + 1vw);
 
 /* contact */
 #contact.contact{
-    margin-top: 100px;
+
+    padding-top: 100px;
     display: flex;
     width: 100%;
     gap: 30px;
@@ -608,22 +642,99 @@ footer{
 
 
 @media only screen and (max-width: 768px){
+    nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 10;
+        position: relative;
+        top: 0;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+        -webkit-filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+        z-index: 10;
+}
+    .header{
+        margin-right: 50px;
+    }
+    nav ul{
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        gap: 20px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        height: 240px;
+        margin-top: 40px;
+        background: #F2F2F2;
+}
+
+nav ul li{
+    padding: 10px;
+}
+
+    .slide{
+        display: flex;
+        filter: drop-shadow(0);
+        -webkit-filter: drop-shadow(0);
+}
+
+    .main{
+        margin-top: 240px;
+    }
    .menu {
+    width: 40px;
+    padding-left: 30px;
     display: flex;
     position: relative;
     flex-direction: column;
    }
+
 
    span{
     height: 3px;
     width: 30px;
     margin: 5px;
     background: #000;
-   }
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
 
    input[type="checkbox"]{
     position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity:0;
+    z-index: 5;
+    cursor: pointer;
    }
 
+   input:checked ~ span:nth-child(2){
+    transform-origin: 0;
+    rotate: 45deg;
+    translate: 5px 2.5px;
+   }
+   input:checked ~ span:nth-child(3){
+    transform-origin: 0;
+    scale: 0;
+   }
+   input:checked ~ span:nth-child(4){
+    transform-origin: 0;
+    rotate: -45deg;
+    translate: 5px -2px;
+   }
+
+
+
+   /* content */
+ .content{
+    padding: 0;
+    
+}
+   
 }
 
