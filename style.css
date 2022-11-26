@@ -715,12 +715,11 @@ nav ul li{
 
    input:checked ~ span:nth-child(2){
     transform-origin: 0;
-    transform: rotate(45deg);
-    translate: 5px 2.5px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
+    transform:translate(5px,2.5px) rotate(45deg);
+    -webkit-transform:translate(5px,2.5px) rotate(45deg);
+    -moz-transform:translate(5px,2.5px) rotate(45deg);
+    -ms-transform:translate(5px,2.5px) rotate(45deg);
+    -o-transform:translate(5px,2.5px) rotate(45deg);
 }
    input:checked ~ span:nth-child(3){
     transform-origin: 0;
@@ -732,12 +731,12 @@ nav ul li{
 }
    input:checked ~ span:nth-child(4){
     transform-origin: 0;
-    transform: rotate(-45deg);
-    translate: 5px -2px;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
+    transform:translate(5px,-2px) rotate(-45deg);
+    -webkit-transform:translate(5px,-2px) rotate(-45deg);
+    -moz-transform:translate(5px,-2px) rotate(-45deg);
+    -ms-transform:translate(5px,-2px) rotate(-45deg);
+    -o-transform:translate(5px,-2px) rotate(-45deg);
+    -webkit-transform:;
 }
 
 
