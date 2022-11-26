@@ -700,11 +700,11 @@ nav ul li{
     width: 30px;
     margin: 5px;
     background: #000;
-    transition: transform .5s;
-    -webkit-transition: transform .5s;
-    -moz-transition: transform .5s;
-    -ms-transition: transform .5s;
-    -o-transition: transform .5s;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
 }
 
    input[type="checkbox"]{
@@ -717,6 +717,11 @@ nav ul li{
    }
 
    input:checked ~ span:nth-child(2){
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
     transform-origin: 0;
     transform:translate(5px,2.5px) rotate(45deg);
     -webkit-transform:translate(5px,2.5px) rotate(45deg);
@@ -725,6 +730,11 @@ nav ul li{
     -o-transform:translate(5px,2.5px) rotate(45deg);
 }
    input:checked ~ span:nth-child(3){
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
     transform-origin: 0;
     transform: scale(0);
     -webkit-transform: scale(0);
@@ -733,6 +743,11 @@ nav ul li{
     -o-transform: scale(0);
 }
    input:checked ~ span:nth-child(4){
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
     transform-origin: 0;
     transform:translate(5px,-2px) rotate(-45deg);
     -webkit-transform:translate(5px,-2px) rotate(-45deg);
