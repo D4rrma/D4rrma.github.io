@@ -482,10 +482,13 @@ div.skill {
 }
 
 .skill .row .col-skill img:hover{
-    scale:1.6;
     filter: grayscale(0) contrast(100%);
-    rotate: -15deg;
+    transform:scale(1.6) rotate(-15deg);
     -webkit-filter: grayscale(0) contrast(100%);
+    -webkit-transform:scale(1.6) rotate(-15deg);
+    -moz-transform:scale(1.6) rotate(-15deg);
+    -ms-transform:scale(1.6) rotate(-15deg);
+    -o-transform:scale(1.6) rotate(-15deg);
 }
 
 .skill .row .col-skill p{
@@ -697,11 +700,11 @@ nav ul li{
     width: 30px;
     margin: 5px;
     background: #000;
-    transition: all .5s;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
 }
 
    input[type="checkbox"]{
@@ -736,7 +739,6 @@ nav ul li{
     -moz-transform:translate(5px,-2px) rotate(-45deg);
     -ms-transform:translate(5px,-2px) rotate(-45deg);
     -o-transform:translate(5px,-2px) rotate(-45deg);
-    -webkit-transform:;
 }
 
 
