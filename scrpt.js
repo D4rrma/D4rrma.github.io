@@ -16,3 +16,15 @@ function reveal() {
   
   window.addEventListener("scroll", reveal);
   
+
+  const nav = document.querySelector('nav ul');
+  const menu = document.querySelector('.menu input');
+  const main = document.querySelector('.content');
+  
+  menu.addEventListener('click',function(){
+      nav.classList.toggle('slide');
+      main.classList.toggle('main');
+      document.querySelector('#header').classList.toggle('header');
+      document.querySelector('nav').classList.toggle('navbar');
+  });
+  
