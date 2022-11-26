@@ -700,11 +700,12 @@ nav ul li{
     width: 30px;
     margin: 5px;
     background: #000;
+    transition: transform .5s;
     transition: all .5s;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
 }
 
    input[type="checkbox"]{
