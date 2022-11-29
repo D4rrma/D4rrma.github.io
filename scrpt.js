@@ -17,14 +17,21 @@ function reveal() {
   window.addEventListener("scroll", reveal);
   
 
-  const nav = document.querySelector('nav ul');
-  const menu = document.querySelector('.menu input');
-  const main = document.querySelector('.content');
-  
-  menu.addEventListener('click',function(){
-      nav.classList.toggle('slide');
-      main.classList.toggle('main');
-      document.querySelector('#header').classList.toggle('header');
-      document.querySelector('nav').classList.toggle('navbar');
-  });
-  
+  const menu = document.getElementById('toggle');
+  const nav = document.getElementById('nav');
+  menu.onclick = function(){
+    menu.classList.toggle('on');
+    nav.classList.toggle('on');
+  }
+
+  document.onclick = function(hide){
+    if(hide.target.id !== 'nav' && hide.target.id !== 'toggle'){
+      menu.classList.remove('on');
+      nav.classList.remove('on');
+    }
+  }
+
+
+
+
+
